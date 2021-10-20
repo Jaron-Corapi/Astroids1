@@ -93,7 +93,7 @@ class Particle {
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false) 
     ctx.fillStyle = this.color
     ctx.fill()
-    ctx.restore
+    ctx.restore()
   }
 
   update() {
@@ -166,7 +166,7 @@ const projectile = new Projectile(
     y: 1
   }
 )
-
+// console.log(particles)
 let animationId
 let score = 0
 function animate() {
@@ -222,8 +222,8 @@ function animate() {
               Math.random() * 2, 
               enemy.color, 
             {
-              x: (Math.random() - 0.5) * (Math.random() * 5), 
-              y: (Math.random() - 0.5) * (Math.random() * 5)
+              x: (Math.random() - 0.5) * (Math.random() * 8), 
+              y: (Math.random() - 0.5) * (Math.random() * 8)
             }))
          }
        
